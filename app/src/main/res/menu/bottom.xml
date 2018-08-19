@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:icon="@drawable/ic_home"
+        android:title="홈"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/bottom_info"
+        android:icon="@drawable/ic_info"
+        android:title="정보"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/bottom_measure"
+        android:icon="@drawable/ic_measure"
+        android:title="측정"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/bottom_analysis"
+        android:icon="@drawable/ic_analysis"
+        android:title="분석"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/bottom_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="설정"
+        app:showAsAction="withText" />
+
+</menu>

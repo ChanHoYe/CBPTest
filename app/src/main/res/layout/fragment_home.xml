@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.ch.cbptest.Utils"/>
+        <variable
+            name="data"
+            type="com.ch.cbptest.Binding.AnalysisBind"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ღ반가워요, "
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/home_uid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 님ღ"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SBP Value" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{Utils.toMmhg(data.SBP), default='0'}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DBP Value" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{Utils.toMmhg(data.DBP), default='0'}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MBP Value" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{Utils.toMmhg(data.MBP), default='0'}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SBP"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="@{Utils.toMmhg(data.SBP), default='0'}"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="@{data.minWidth, default=wrap_content}"
+                            android:layout_height="1dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_arrow_down" />
+
+                        <View
+                            android:layout_width="@{data.maxWidth, default=wrap_content}"
+                            android:layout_height="1dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_arrow_down" />
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="160"
+                        android:progress="@{data.SBP, default=0}"
+                        android:progressTint="@{data.SBP}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DBP"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="@{Utils.toMmhg(data.DBP), default='0'}"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="@{data.minWidth, default=wrap_content}"
+                            android:layout_height="1dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_arrow_down" />
+
+                        <View
+                            android:layout_width="@{data.maxWidth, default=wrap_content}"
+                            android:layout_height="1dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_arrow_down" />
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="160"
+                        android:progress="@{data.DBP, default=0}"
+                        android:progressTint="@{data.DBP}" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MBP"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:text="@{Utils.toMmhg(data.MBP), default='0'}"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="@{data.minWidth, default=wrap_content}"
+                            android:layout_height="1dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_arrow_down" />
+
+                        <View
+                            android:layout_width="@{data.maxWidth, default=wrap_content}"
+                            android:layout_height="1dp" />
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:src="@drawable/ic_arrow_down" />
+
+                    </LinearLayout>
+
+                    <mobi.gspd.segmentedbarview.SegmentedBarView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:sbv_empty_segment_text="No Segment"
+                        app:sbv_segment_gap_width="2dp"
+                        app:sbv_segment_text_size="20sp"
+                        app:sbv_show_description_text="true"
+                        app:sbv_show_segment_text="false"
+                        app:sbv_side_style="rounded"
+                        app:sbv_side_text_style="twoSided"
+                        app:sbv_value_sign_height="30dp"
+                        app:sbv_value_sign_round="8dp"
+                        app:sbv_value_sign_width="50dp"
+                        app:sbv_value_text_size="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

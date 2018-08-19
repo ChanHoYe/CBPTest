@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "769371748593",
+    "firebase_url": "https://cbp-gachon-test.firebaseio.com",
+    "project_id": "cbp-gachon-test",
+    "storage_bucket": "cbp-gachon-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769371748593:android:0ddfd9b2c375a20b",
+        "android_client_info": {
+          "package_name": "com.ch.cbptest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769371748593-6ucli35t5hrrpbqtn3na0vhhenjsd3nq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ch.cbptest",
+            "certificate_hash": "7af3a9e3cbca827c222d1079d8a68d085dacde80"
+          }
+        },
+        {
+          "client_id": "769371748593-4kbga0ppqstntes9us19b9nqqd3aqc5q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ch.cbptest",
+            "certificate_hash": "04523bc1bb733db26161ed2c526de3017ec89639"
+          }
+        },
+        {
+          "client_id": "769371748593-rs8sj1psjl8ffict1fkf2abb5qigu2vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcM4RPSRKLBZhVLKK6P9iOuJMAhk03GiE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769371748593-rs8sj1psjl8ffict1fkf2abb5qigu2vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

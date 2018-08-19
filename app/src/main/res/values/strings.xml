@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CBP Test</string>
+
+    <string name="loading">로드 중...</string>
+    <string name="open">drawer open</string>
+    <string name="close">drawer close</string>
+</resources>
